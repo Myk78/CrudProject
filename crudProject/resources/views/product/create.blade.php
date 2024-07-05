@@ -13,20 +13,40 @@
     <div class="container">
         <div class="row d-flex justify-content-center">
             <div class="col-md-10">
-                <div class="card borde-0 shadow-lg">
-                    <div class="card-header">
-                        <h3>Create Product</h3>
+                <div class="card borde-0 shadow-lg my-4">
+                    <div class="card-header bg-dark">
+                        <h3 class="text-white">Create Product</h3>
                     </div>
-                    <div class="card-body">
-                        <div class="mb-3">
-                            <label for="">Name</label>
-                            <input type="text" class="form-control form-control-lg" placeholder="Name" name="name">
+                    <form action="{{route('product.store')}}" method="POST" @csrf>          
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <label for="" class="form-label h5">Name</label>
+                                <input type="text" class="form-control form-control-lg" placeholder="Name" name="name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="" class="form-label h5">sku</label>
+                                <input type="text" class="form-control form-control-lg" placeholder="sku" name="sku">
+                            </div>
+                            <div class="mb-3">
+                                <label for="" class="form-label h5">Price</label>
+                                <input type="text" class="form-control form-control-lg" placeholder="Price" name="Price">
+                            </div>
+                            <div class="mb-3">
+                                <label for="" class="form-label h5" >Description</label>
+                                <textarea class="form-control form-control-lg" name="description"  cols="30" rows="5"></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="" class="form-label h5">Image</label>
+                                <input type="file" class="form-control form-control-lg" placeholder="Upload image" name="image">
+                            </div>
+                            <div class="d-grid">
+                                <button class="btn btn-success btn-lg">Submit</button>
+                            </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
-    <h1>Hello, world!</h1>
   </body>
 </html>
