@@ -38,6 +38,7 @@
                                 <th>Image</th>
                                 <th>Name</th>
                                 <th>Sku</th>
+                                <th>Description</th>
                                 <th>Price</th>
                                 <th>created_at</th>
                                 <th>Action</th>
@@ -53,11 +54,16 @@
                                         </td>
                                         <td>{{$pro->name}}</td>
                                         <td>{{$pro->sku}}</td>
+                                        <td>{{$pro->description}}</td>
                                         <td>{{$pro->price}}</td>
                                         <td>{{\Carbon\Carbon::parse($pro->created_at)->format('d M,Y')}}</td>
                                         <td>
                                             <a href="{{route('product.edit',$pro->id)}}" class="btn btn-success">Edit</a>
-                                            <a href="" class="btn btn-danger">Delete</a>
+                                            <a onclick="delproduct({{$pro->id}})" href="" class="btn btn-danger">Delete</a>
+                                            <form id="delete-product-form-{{$pro->id}}" action="{{route('product.delete',$pro->id)}}" method="POST">
+                                                @csrf
+                                                @method('delete')
+                                            </form>
                                         </td>
                                     </tr>
                               @endforeach
@@ -84,6 +90,13 @@
             }, 3000);
         }
     });
+    function delproduct(id) {
+        if (confirm("Are you sure to delete this product ?")) {
+            document.getElementById("delete-product-form-" + id).submit();
+            
+        }
+        
+    }
 </script>
 
 </html>

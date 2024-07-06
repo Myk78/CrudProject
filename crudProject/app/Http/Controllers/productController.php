@@ -130,6 +130,18 @@ class productController extends Controller
                 return redirect()->route('product.index')->with('success','Product update successfull');
 
         }
+    }
+    //this method will delete a product item
+    public function destory($id){
+        $product = Product::findOrFail($id);
 
-}
+        // delete image first
+        File::delete(public_path('uploads/products'.$product->image));
+
+        // delete data form database
+        $product->delete();
+
+        return redirect()->route('product.index')->with('success','Product delete successfully');
+            
+    }
 }
