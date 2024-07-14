@@ -1,0 +1,31 @@
+[
+    {
+        "name": "yaseen",
+        "user_id": "1",
+        "email":"myk@gmailll",
+        "age":"22",
+        "address":"gyuhjk"
+    },
+    {
+        "name": "yaseen",
+        "user_id": "1",
+        "email":"myk1@gmailll",
+        "age":"22",
+        "address":"gyuhjk"
+    },
+    {
+        "name": "barkat ali",
+        "user_id": "2",
+        "email":"barkat@gmailll",
+        "age":"20",
+        "address":"gyuhjk"
+    },
+    {
+        "name": "shazieb",
+        "user_id": "3",
+        "email":"shazieb@gmailll",
+        "age":"12",
+        "address":"gyuhjk"
+    }
+
+]

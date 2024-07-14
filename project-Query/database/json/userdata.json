@@ -1,0 +1,18 @@
+[
+    {
+        "name": "Myk",
+        "email":"myk@gmail.com",
+        "password": "pass123"
+    },
+    {
+        "name":"barkat ali",
+        "email": "bark@gmail.com",
+        "password":"bark123"
+    },
+    {
+        "name":"Shazieb",
+        "email": "shahzieb.com",
+        "password":"shahzieb123"
+    }
+        
+]
