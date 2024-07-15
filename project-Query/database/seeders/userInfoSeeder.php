@@ -15,7 +15,7 @@ class userInfoSeeder extends Seeder
     public function run(): void
     {
         userInfo::truncate();
-       $detail = File::get(path:'database/json/userinfos.json');
+       $detail = File::get(path:'database/json/userInfos.json');
         $userdetail = collect(json_decode($detail));
         $userdetail->each(function($personal){
             userInfo::create([
