@@ -11,11 +11,11 @@ class userdataController extends Controller
         $user = DB::table('userdatas')->get();
 
         return view('welcome',compact('user'));
-        
+
         // foreach ($user as $id=> $us) {
         //      echo $us->name .'<br>';
         // }
-        // return $user;
-        
+        // return $user;   
     }
+    
 }

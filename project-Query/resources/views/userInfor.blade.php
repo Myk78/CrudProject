@@ -15,15 +15,25 @@
                 <table class="table table-bordered table-striped">
                     <tr>
                         <th>Name</th>
+                        {{-- <th>User_id</th> --}}
                         <th>Email</th>
-                        <th>Password</th>
+                        <th>password</th>
+                        {{-- <th>age</th> --}}
+                        {{-- <th>address</th> --}}
+                        <th>detailInfo</th>
                     </tr>
                     
-                        @foreach ( $user as $us)
+                        @foreach ( $info as $id => $us)
                         <tr>
                         <td>{{$us->name}}</td>
+                        {{-- <td><a href="{{route('userdata',$id)}}">{{$us->user_id}}</a> </td> --}}
                         <td>{{$us->email}}</td>
                         <td>{{$us->password}}</td>
+                        {{-- <td>{{$us->age}}</td>
+                        <td>{{$us->address}}</td> --}}
+                        <td>
+                            <a href="{{route('userdetail',$id)}}" class="btn btn-success">Veiw</a>
+                        </td>
                        </tr>     
                         @endforeach
                     

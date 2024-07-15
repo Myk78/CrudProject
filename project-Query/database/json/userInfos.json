@@ -3,6 +3,7 @@
         "name": "yaseen",
         "user_id": "1",
         "email":"myk@gmailll",
+        "password":"m123",
         "age":"22",
         "address":"gyuhjk"
     },
@@ -10,6 +11,7 @@
         "name": "yaseen",
         "user_id": "1",
         "email":"myk1@gmailll",
+        "password":"m1223",
         "age":"22",
         "address":"gyuhjk"
     },
@@ -17,6 +19,7 @@
         "name": "barkat ali",
         "user_id": "2",
         "email":"barkat@gmailll",
+        "password":"b123",
         "age":"20",
         "address":"gyuhjk"
     },
@@ -24,6 +27,7 @@
         "name": "shazieb",
         "user_id": "3",
         "email":"shazieb@gmailll",
+        "password":"c123",
         "age":"12",
         "address":"gyuhjk"
     }

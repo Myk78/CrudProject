@@ -19,6 +19,7 @@ return new class extends Migration
             ->on('userdatas')->onDelete('cascade')->onUpdate('cascade');
             // $table->foreignId('user_id')->constrained('userdata');
             $table->string('email',40)->unique();
+            $table->string('password',30)->default('No password')->nullable();
             $table->string('age',10);
             $table->string('address');
             $table->timestamps();

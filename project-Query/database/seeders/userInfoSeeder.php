@@ -22,6 +22,7 @@ class userInfoSeeder extends Seeder
                 'name' => $personal->name,
                 'user_id' =>$personal->user_id,
                 'email' => $personal->email,
+                'password' => $personal->password,
                 'age' => $personal->age,
                 'address'=>$personal->address
 
