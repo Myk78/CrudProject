@@ -15,6 +15,7 @@
                 <h2 class="text-center">user data</h2>
                 <table class="table table-striped table-bordered">
                     <tr>
+                        <th>Id</th>
                         <th>Name</th>
                         <th>User_id</th>
                         <th>Email</th>
@@ -23,6 +24,7 @@
                     </tr>
                     @foreach ($info as $in )
                     <tr>    
+                        <td>{{$in->id}}</td>
                         <td>{{$in->name}}</td>
                         <td>{{$in->user_id}}</td>
                         <td>{{$in->email}}</td>

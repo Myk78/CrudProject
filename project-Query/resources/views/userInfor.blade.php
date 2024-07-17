@@ -12,19 +12,24 @@
         <div class="row">
             <div class="col-md-6">
                 <h2 class="text-center ">ALL User data </h2>
+                <h3><a href="" class="btn btn-primary">Add User</a></h3>
                 <table class="table table-bordered table-striped">
                     <tr>
+                        <th>Id</th>
                         <th>Name</th>
                         {{-- <th>User_id</th> --}}
                         <th>Email</th>
-                        <th>password</th>
+                        <th>Password</th>
                         {{-- <th>age</th> --}}
                         {{-- <th>address</th> --}}
-                        <th>detailInfo</th>
+                        <th>DetailInfo</th>
+                        <th>Update</th>
+                        <th>Destory</th>
                     </tr>
                     
                         @foreach ( $info as $id => $us)
                         <tr>
+                        <td>{{$id}}</td>
                         <td>{{$us->name}}</td>
                         {{-- <td><a href="{{route('userdata',$id)}}">{{$us->user_id}}</a> </td> --}}
                         <td>{{$us->email}}</td>
@@ -33,6 +38,12 @@
                         <td>{{$us->address}}</td> --}}
                         <td>
                             <a href="{{route('userdetail',$id)}}" class="btn btn-success">Veiw</a>
+                        </td>
+                        <td>
+                            <a href="{{route('removeuser',$id)}}" class="btn btn-warning ">update</a>
+                        </td>
+                        <td>
+                            <a href="{{route('removeuser',$id)}}" class="btn btn-danger">destory</a>
                         </td>
                        </tr>     
                         @endforeach

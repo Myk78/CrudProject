@@ -14,10 +14,12 @@ class userInfoSeeder extends Seeder
      */
     public function run(): void
     {
-        userInfo::truncate();
+        // userInfo::truncate();
        $detail = File::get(path:'database/json/userInfos.json');
-        $userdetail = collect(json_decode($detail));
-        $userdetail->each(function($personal){
+        
+       $userdetail = collect(json_decode($detail));
+       
+       $userdetail->each(function($personal){
             userInfo::create([
                 'name' => $personal->name,
                 'user_id' =>$personal->user_id,

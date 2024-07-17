@@ -20,8 +20,8 @@ return new class extends Migration
             // $table->foreignId('user_id')->constrained('userdata');
             $table->string('email',40)->unique();
             $table->string('password',30)->default('No password')->nullable();
-            $table->string('age',10);
-            $table->string('address');
+            $table->string('age',99)->default('unknown age');
+            $table->string('address')->default('address is not provide');
             $table->timestamps();
         });
     }
