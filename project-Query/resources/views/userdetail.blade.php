@@ -19,6 +19,7 @@
                         <th>Name</th>
                         <th>User_id</th>
                         <th>Email</th>
+                        <th>Age</th>
                         <th>password</th>
                         <th>Address</th>
                     </tr>
@@ -28,6 +29,7 @@
                         <td>{{$in->name}}</td>
                         <td>{{$in->user_id}}</td>
                         <td>{{$in->email}}</td>
+                        <td>{{$in->age}}</td>
                         <td>{{$in->password}}</td>
                         <td>{{$in->address}}</td>
                     </tr>

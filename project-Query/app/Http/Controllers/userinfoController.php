@@ -17,33 +17,59 @@ class userinfoController extends Controller
         return view('userdetail',compact('info'));
 
     }
-    public function adduser(){
+    public function adduser(Request $req){
         $info = DB::table('user_infos')->insert([
-            'name' => 'Arslan',
-            'user_id' => '2',
-            'email' => 'arslan@gmail.com',
-            'password' => 'ash123',
-            'age' => '24',
-            'address' => 'xyz',
-            'created_at' => now(),
-            'updated_at' => now()
+               'name' => $req->name,
+                'user_id' =>$req->user_id,
+                'email' => $req->email,
+                'password' => $req->password,
+                'age' => $req->age,
+                'address' => $req->address,
+                'created_at' => now(),
+                'updated_at' => now()
+
+
+        // Manual;y add the data in database
+            // 'name' => 'Arslan',
+            // 'user_id' => '2',
+            // 'email' => 'arslan@gmail.com',
+            // 'password' => 'ash123',
+            // 'age' => '24',
+            // 'address' => 'xyz',
+            // 'created_at' => now(),
+            // 'updated_at' => now()
 
         ]);
+        if ($info) {
+          return redirect()->route('alluser',compact('info'));            # code...
+        }else{
+            '<h2> NO Data Found</h2>';
+        }
 
-        return view('userInfor',compact('info'));
+        
         // if($user){
         //     '<h1> user ad'
         // }
     }
+    public function updatepage($id){
+        $info = DB::table('user_infos')->where('id',$id)->first();
+        // return $user;
+        return view('update',compact('info','id'));
+    }
 
-    public function updateuser(){
-        $info = DB::table('user_infos')->where('id',2)
+    public function updateuser(Request $req, $id) {
+        $info = DB::table('user_infos')->where('id',$id)
         ->update([
-            'name' => 'Mohammad Yaseen',
-            'age' => 23
+                'name' => $req->name,
+                'user_id' =>$req->user_id,
+                'email' => $req->email,
+                'password' => $req->password,
+                'age' => $req->age,
+                'address' => $req->address
         ]);
         if ($info) {
-            return view('userInfor',compact('info'));
+            return redirect()->route('alluser');
+            //  view('userInfor',compact('info'));
         }
     }
 

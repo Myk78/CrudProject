@@ -13,6 +13,16 @@
         "name":"Shazieb",
         "email": "shahzieb.com",
         "password":"shahzieb123"
+    },
+    {
+        "name":"saima",
+        "email": "saima.com",
+        "password":"saima123"
+    },
+    {
+        "name":"allahdin",
+        "email": "allahdin@.com",
+        "password":"allahdin123"
     }
         
 ]

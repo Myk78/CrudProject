@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col-md-6">
                 <h2 class="text-center ">ALL User data </h2>
-                <h3><a href="" class="btn btn-primary">Add User</a></h3>
+                <h3><a href="{{ route('newuser')}}" class="btn btn-primary">Add User</a></h3>
                 <table class="table table-bordered table-striped">
                     <tr>
                         <th>Id</th>
@@ -40,7 +40,7 @@
                             <a href="{{route('userdetail',$id)}}" class="btn btn-success">Veiw</a>
                         </td>
                         <td>
-                            <a href="{{route('removeuser',$id)}}" class="btn btn-warning ">update</a>
+                            <a href="{{route('updateuser.page',$id)}}" class="btn btn-warning ">update</a>
                         </td>
                         <td>
                             <a href="{{route('removeuser',$id)}}" class="btn btn-danger">destory</a>
