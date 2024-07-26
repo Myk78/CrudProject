@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 class userinfoController extends Controller
 {
     public function showinfo(){
-        $info = DB::table('user_infos')->select('name','email','password')->get();
+        $info = DB::table('user_infos')->select('id','name','email','password')->orderBy('name')->Paginate(3);
         return view('userInfor',compact('info'));
     }
     public function singleuser($id){
